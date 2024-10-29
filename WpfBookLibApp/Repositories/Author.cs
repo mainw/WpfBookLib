@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfBookLibApp.Repositories
 {
-    internal class Author : IRepoAuthor
+    public class Author : IRepoAuthor
     {
         
 

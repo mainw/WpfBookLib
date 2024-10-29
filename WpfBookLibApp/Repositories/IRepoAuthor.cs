@@ -8,6 +8,6 @@ namespace WpfBookLibApp.Repositories
 {
     public interface IRepoAuthor
     {
-        void AddAuthor(string fio);
+        
     }
 }
