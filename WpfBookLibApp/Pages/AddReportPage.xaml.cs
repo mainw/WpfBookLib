@@ -24,5 +24,10 @@ namespace WpfBookLibApp.Pages
         {
             InitializeComponent();
         }
+
+        private void SaveReportBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,8 +7,48 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="BooksPage">
-
-    <Grid>
-        
+       <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65px"></RowDefinition>
+            <RowDefinition Height="35px"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackPanel Style="{StaticResource TitleStackPanel}">
+                <TextBlock Style="{StaticResource TitleTextBlock}" Text="Книги"></TextBlock>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Style="{StaticResource SearchStackPanel}">
+                <TextBlock Text="Поиск книг:" VerticalAlignment="Center" Margin="0px 0px 10px 0px"></TextBlock>
+                <TextBox Width="150px" Margin="0px 0px 10px 0px"></TextBox>
+                <Button Content="Добавить" Width="120px"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--Сюда инфу поместить-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <Border Style="{StaticResource BorderInfoBook}">
+                <StackPanel Style="{StaticResource MainStackPanel}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Наименование книги:" Style="{StaticResource TitleDiscriptionBook}"></TextBlock>
+                        <TextBlock Text="инфатб"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Автор:"  Style="{StaticResource TitleDiscriptionBook}"></TextBlock>
+                        <TextBlock Text="инфатб"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Описание:" Style="{StaticResource TitleDiscriptionBook}"></TextBlock>
+                        <TextBlock Text="инфатб"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

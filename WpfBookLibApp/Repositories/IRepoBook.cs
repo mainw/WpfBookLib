@@ -8,5 +8,6 @@ namespace WpfBookLibApp.Repositories
 {
     public interface IRepoBook
     {
+        
     }
 }

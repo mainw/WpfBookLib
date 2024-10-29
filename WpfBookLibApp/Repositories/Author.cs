@@ -8,7 +8,6 @@ namespace WpfBookLibApp.Repositories
 {
     public class Author : IRepoAuthor
     {
-        
 
     }
 }
