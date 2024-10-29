@@ -5,10 +5,44 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfBookLibApp.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="AddReportPage">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Background="Black">
+            <TextBlock Foreground="White" FontSize="60" FontWeight="Black" HorizontalAlignment="Center">Добавить отзыв</TextBlock>
+        </Border>
+        <Border CornerRadius="30" Background="Black" Grid.Row="1" HorizontalAlignment="Center" Height="700" Width="600">
+            <StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Foreground="White" FontSize="50" FontWeight="Black" Margin="5 10 0 0" Padding="0">ОПИСАНИЕ</Label>
+                    <TextBox Margin="20 0 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="250" Width="550"></TextBox>
+                    <Label Foreground="White" FontSize="50" FontWeight="Black" Margin="5 5 0 0" Padding="0">ОЦЕНКА</Label>
+                    <ComboBox x:Name="MarksBox" Margin="20 0 0 0" Width="550" Height="150" HorizontalAlignment="Left">
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="1"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="2"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="3"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="4"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="5"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="6"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="7"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="8"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="9"></ComboBoxItem>
+                        <ComboBoxItem FontSize="40" FontWeight="Black" HorizontalAlignment="Center" Content="10"></ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <Button x:Name="SaveReportBtn" Click="SaveReportBtn_Click" Background="White" Foreground="Black" Margin="0 20 0 0" Content="Сохранить" FontWeight="Black" FontSize="50">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
