@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Repositories\Author.cs" />
     <Compile Include="Repositories\IRepoAuthor.cs" />
     <Compile Include="Repositories\IRepoBook.cs" />
     <Compile Include="Repositories\IRepoComment.cs" />

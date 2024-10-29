@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WpfBookLibApp.Repositories
 {
-    public interface IRepoAuthor
+    internal class Author : IRepoAuthor
     {
-        void AddAuthor(string fio);
+
     }
 }
