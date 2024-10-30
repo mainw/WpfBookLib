@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace ModelsLib.Models
 {
-    public class Book
+    public class UserBookInteraction
     {
+        public long InteractionId { get; set; }
         public long BookId { get; set; }
-        public string NameGenres { get; set; }
         public long UserId { get; set; }
-        public string Name { get; set; }
-        public DateTime? Date { get; set; }
-        public string Description { get; set; }
     }
 }

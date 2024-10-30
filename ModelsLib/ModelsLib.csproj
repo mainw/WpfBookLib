@@ -44,9 +44,12 @@
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Mark.cs" />
+    <Compile Include="Models\BookFeedbacks.cs" />
+    <Compile Include="Models\GenresEnum.cs" />
+    <Compile Include="Models\MarkEnum.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserBookInteraction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

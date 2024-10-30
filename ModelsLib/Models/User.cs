@@ -8,5 +8,7 @@ namespace ModelsLib.Models
 {
     public class User
     {
+        public long UserId {  get; set; }
+        public string Fullname { get; set; }
     }
 }

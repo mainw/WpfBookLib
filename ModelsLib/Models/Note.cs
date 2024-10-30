@@ -8,5 +8,7 @@ namespace ModelsLib.Models
 {
     public class Note
     {
+        public long InteractionId { get; set; }
+        public string NoteText { get; set; }
     }
 }

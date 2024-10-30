@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ModelsLib.Models
 {
-    public class Comment
+    public class BookFeedbacks
     {
         public long InteractionId { get; set; }
-        public string CommentText { get; set; }
+        public string FeedBackText { get; set; }
+        public string Mark { get; set; }
     }
 }

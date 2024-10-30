@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ModelsLib.Models
 {
-    public class Author
+    public class MarkEnum
     {
-        public long AuthorId { get; set; }
-        public string Fullname { get; set; }
+        public string Mark { get; set; }
     }
 }
