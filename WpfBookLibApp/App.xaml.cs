@@ -28,7 +28,11 @@ namespace WpfBookLibApp
 
             //Регистрация репозиториев
             builder.RegisterType<IRepoAuthor>().As<RepoAuthor>().SingleInstance();
-            builder.RegisterType<IRepoAuthor>().As<RepoAuthor>().SingleInstance();
+            builder.RegisterType<IRepoBook>().As<RepoBook>().SingleInstance();
+            builder.RegisterType<IRepoComment>().As<RepoComment>().SingleInstance();
+            builder.RegisterType<IRepoBookFeedbacks>().As<RepoBookFeedbacks>().SingleInstance();
+            builder.RegisterType<IRepoNote>().As<RepoNote>().SingleInstance();
+            builder.RegisterType<IRepoUser>().As<RepoUser>().SingleInstance();
 
             //Регистрация окон
             builder.RegisterType<MainWindow>().AsSelf();

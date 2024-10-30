@@ -5,10 +5,44 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfBookLibApp.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEditBookPage">
-
-    <Grid>
-        
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AddEditBookPage" ShowsNavigationUI="False">
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Style="{StaticResource TitleStackPanel}">
+                <TextBlock Text="ДОБАВЛЕНИЕ/РЕДАКТИРОВАНИЕ КНИГИ" Style="{StaticResource TitleTextBlock}"/>
+            </StackPanel>
+            <Border Style="{StaticResource MainBorder}">
+                <StackPanel Style="{StaticResource MainStackPanel}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="НАЗВАНИЕ КНИГИ" Style="{StaticResource HeaderTextBlock}"/>
+                        <TextBox x:Name="NameBookTextBox" Style="{StaticResource MainTextBox}"/>
+                        <TextBlock Text="ГОД ИЗДАНИЯ" Style="{StaticResource HeaderTextBlock}"/>
+                        <TextBox x:Name="YearTextBox" Style="{StaticResource MainTextBox}"/>
+                        <TextBlock Text="ЖАНР" Style="{StaticResource HeaderTextBlock}"/>
+                        <ComboBox x:Name="GenreComboBox" Style="{StaticResource MainComboBox}" SelectedIndex="0">
+                            <ComboBoxItem>
+                                <TextBlock Text="ВЫБЕРИТЕ ЖАНР" Style="{StaticResource InComboBoxTextBlock}"/>
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Text="АВТОР" Style="{StaticResource HeaderTextBlock}"/>
+                        <ComboBox x:Name="AuthorComboBox" Style="{StaticResource MainComboBox}" SelectedIndex="0">
+                            <ComboBoxItem>
+                                <TextBlock Text="ВЫБЕРИТЕ АВТОРА" Style="{StaticResource InComboBoxTextBlock}"/>
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Text="ОПИСАНИЕ" Style="{StaticResource HeaderTextBlock}"/>
+                        <TextBox x:Name="DescriptionTextBox" Style="{StaticResource MainTextBox}" Height="150" TextWrapping="Wrap"/>
+                        <Button x:Name="SaveBookBtn" Style="{StaticResource MainBtnStyle}" Content="СОХРАНИТЬ" Click="SaveBookBtn_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>
