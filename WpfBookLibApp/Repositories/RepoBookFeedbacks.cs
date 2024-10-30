@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace WpfBookLibApp.Repositories
 {
-    public class RepoComment : IRepoComment
+    public class RepoBookFeedbacks : IRepoBookFeedbacks
     {
-        public void Add(Comment book)
+        public void Add(BookFeedbacks bookFeedbacks)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Comment book)
+        public void Delete(BookFeedbacks bookFeedbacks)
         {
             throw new NotImplementedException();
         }
 
-        public void Edit(Comment book)
+        public void Edit(BookFeedbacks bookFeedbacks)
         {
             throw new NotImplementedException();
         }
 
-        public Comment Get(int commentId)
+        public BookFeedbacks Get(int bookFeedbacksId)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Comment> GetAll()
+        public IEnumerable<BookFeedbacks> GetAll()
         {
             throw new NotImplementedException();
         }

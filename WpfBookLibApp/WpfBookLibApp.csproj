@@ -88,14 +88,14 @@
     </ApplicationDefinition>
     <Compile Include="Repositories\RepoBook.cs" />
     <Compile Include="Repositories\RepoComment.cs" />
-    <Compile Include="Repositories\RepoMark.cs" />
+    <Compile Include="Repositories\RepoBookFeedbacks.cs" />
     <Compile Include="Repositories\RepoNote.cs" />
     <Compile Include="Repositories\RepoUser.cs" />
     <Compile Include="Repositories\RepoAuthor.cs" />
     <Compile Include="Repositories\IRepoAuthor.cs" />
     <Compile Include="Repositories\IRepoBook.cs" />
     <Compile Include="Repositories\IRepoComment.cs" />
-    <Compile Include="Repositories\IRepoMark.cs" />
+    <Compile Include="Repositories\IRepoBookFeedbacks.cs" />
     <Compile Include="Repositories\IRepoNote.cs" />
     <Compile Include="Repositories\IRepoUser.cs" />
     <Page Include="MainWindow.xaml">
@@ -159,6 +159,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ModelsLib\ModelsLib.csproj">
+      <Project>{caeb3d7b-1c51-410a-8049-97934cdca334}</Project>
+      <Name>ModelsLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

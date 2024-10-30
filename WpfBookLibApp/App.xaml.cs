@@ -18,7 +18,7 @@ namespace WpfBookLibApp
         public static IRepoAuthor _repoAuthor;
         public static IRepoBook _repoBook;
         public static IRepoComment _repoComment;
-        public static IRepoMark repoMark;
+        public static IRepoBookFeedbacks repoMark;
         public static IRepoNote _repoNote;
         public static IRepoUser _repoUser;
         protected override void OnStartup(StartupEventArgs e)
