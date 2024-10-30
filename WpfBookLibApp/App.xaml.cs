@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using WpfBookLibApp.Repositories;
 using Autofac;
+using WpfBookLibApp.Pages;
 namespace WpfBookLibApp
 {
     /// <summary>
@@ -24,6 +25,13 @@ namespace WpfBookLibApp
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            _container = Configure();
+
+            var mainWindow = _container.Resolve<MainWindow>();
+            mainWindow.Show();
+        }
+        private IContainer Configure()
+        {
             var builder = new ContainerBuilder();
 
             //Регистрация репозиториев
@@ -37,11 +45,16 @@ namespace WpfBookLibApp
             //Регистрация окон
             builder.RegisterType<MainWindow>().AsSelf();
 
+            //Регистрация страниц
+            builder.RegisterType<AddEditBookPage>().AsSelf();
+            builder.RegisterType<AddReportPage>().AsSelf();
+            builder.RegisterType<BooksPage>().AsSelf();
 
-            _container = builder.Build();
-
-            var mainWindow = _container.Resolve<MainWindow>();
-            mainWindow.Show();
+            return builder.Build();
+        }
+        public static void NavigateToPage<T>()
+        {
+            (App.Current.MainWindow as MainWindow).MainFrame.Navigate(_container.Resolve<T>());
         }
     }
 }

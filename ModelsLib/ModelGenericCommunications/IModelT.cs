@@ -11,7 +11,7 @@ namespace ModelsLib.ModelGenericCommunications
         void Add(T value);
         void Delete(T value);
         void Update(T value);
-
-        T GetValue(string name);
+        T GetValue(string name, object value);//проверка рефлексией соответствия свойства значению
+        IEnumerable<T> GetAll();
     }
 }
