@@ -10,5 +10,6 @@ namespace ModelsLib.Models
     {
         public long UserId {  get; set; }
         public string Fullname { get; set; }
+        public IEnumerable<UserBookInteraction> UserBookInteractions { get; set; }
     }
 }

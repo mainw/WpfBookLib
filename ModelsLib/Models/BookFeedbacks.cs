@@ -11,5 +11,7 @@ namespace ModelsLib.Models
         public long InteractionId { get; set; }
         public string FeedBackText { get; set; }
         public string Mark { get; set; }
+        public MarkEnum MarkEnum { get; set; }
+        public UserBookInteraction UserBookInteraction { get; set; }
     }
 }

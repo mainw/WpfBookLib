@@ -9,5 +9,6 @@ namespace ModelsLib.Models
     public class MarkEnum
     {
         public string Mark { get; set; }
+        public IEnumerable<BookFeedbacks> BookFeedbacks { get; set; }
     }
 }

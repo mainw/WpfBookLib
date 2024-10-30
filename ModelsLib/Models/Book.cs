@@ -10,9 +10,11 @@ namespace ModelsLib.Models
     {
         public long BookId { get; set; }
         public string NameGenres { get; set; }
-        public long UserId { get; set; }
+        public long AuthorId { get; set; }
         public string Name { get; set; }
         public DateTime? Date { get; set; }
         public string Description { get; set; }
+        public Author Author { get; set; }
+        public IEnumerable<UserBookInteraction> UserBookInteraction { get; set; }
     }
 }

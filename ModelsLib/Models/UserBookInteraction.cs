@@ -11,5 +11,10 @@ namespace ModelsLib.Models
         public long InteractionId { get; set; }
         public long BookId { get; set; }
         public long UserId { get; set; }
+        public User User { get; set; }
+        public Book Book { get; set; }
+        public IEnumerable<Comment> Comments { get; set; }
+        public IEnumerable<Note> Notes { get; set; }
+        public IEnumerable<BookFeedbacks> BookFeedbacks { get; set; }
     }
 }

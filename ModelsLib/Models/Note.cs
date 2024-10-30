@@ -10,5 +10,6 @@ namespace ModelsLib.Models
     {
         public long InteractionId { get; set; }
         public string NoteText { get; set; }
+        public UserBookInteraction UserBookInteraction { get; set; }
     }
 }
