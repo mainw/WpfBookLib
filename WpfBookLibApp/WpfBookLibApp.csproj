@@ -86,7 +86,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Repositories\Author.cs" />
+    <Compile Include="Repositories\RepoBook.cs" />
+    <Compile Include="Repositories\RepoComment.cs" />
+    <Compile Include="Repositories\RepoMark.cs" />
+    <Compile Include="Repositories\RepoNote.cs" />
+    <Compile Include="Repositories\RepoUser.cs" />
+    <Compile Include="Repositories\RepoAuthor.cs" />
     <Compile Include="Repositories\IRepoAuthor.cs" />
     <Compile Include="Repositories\IRepoBook.cs" />
     <Compile Include="Repositories\IRepoComment.cs" />

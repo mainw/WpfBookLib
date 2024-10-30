@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfBookLibApp.Repositories
+namespace ModelsLib.Models
 {
-    public class Author : IRepoAuthor
+    public class Author
     {
-        
     }
 }
