@@ -35,7 +35,7 @@ namespace WpfBookLibApp.Pages
 
         private void BtnAddBook_Click(object sender, RoutedEventArgs e)
         {
-            // Ссылку на добавление книги
+            (App.Current.MainWindow as MainWindow).MainFrame.Navigate(new Pages.AddEditBookPage());
         }
         private void BtnDelBook_Click(object sender, RoutedEventArgs e)
         {
