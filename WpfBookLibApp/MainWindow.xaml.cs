@@ -22,6 +22,7 @@ namespace WpfBookLibApp
         public MainWindow()
         {
             InitializeComponent();
+            ChangePage<Pages.BooksPage>();
         }
         public void ChangePage<T>() where T : Page
         {
