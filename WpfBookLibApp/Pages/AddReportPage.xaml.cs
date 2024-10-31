@@ -22,16 +22,28 @@ namespace WpfBookLibApp.Pages
     /// </summary>
     public partial class AddReportPage : Page
     {
-        private readonly IRepoBookFeedbacks _repoBookFeedbacks;
-        public AddReportPage(IRepoBookFeedbacks repoBookFeedbacks)
+        private Book _book;
+        public AddReportPage(Book book)
         {
             InitializeComponent();
-            _repoBookFeedbacks = repoBookFeedbacks;
+            MarksBox.ItemsSource = App._repoMarkEnum.GetAll();
+            _book = book;
         }
 
         private void SaveReportBtn_Click(object sender, RoutedEventArgs e)
         {
-           
+            if(MarksBox.SelectedIndex != -1)
+            {
+                BookFeedbacks bookFeedbacks = new BookFeedbacks()
+                {
+                    //
+                };
+            App._repoBookFeedbacks.Add(bookFeedbacks);
+            }
+            else
+            {
+                MessageBox.Show("Выберите оценку");
+            }
         }
     }
 }

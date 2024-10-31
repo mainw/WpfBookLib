@@ -19,7 +19,8 @@ namespace WpfBookLibApp
         public static IRepoAuthor _repoAuthor;
         public static IRepoBook _repoBook;
         public static IRepoComment _repoComment;
-        public static IRepoBookFeedbacks repoMark;
+        public static IRepoMarkEnum _repoMarkEnum;
+        public static IRepoBookFeedbacks _repoBookFeedbacks;
         public static IRepoNote _repoNote;
         public static IRepoUser _repoUser;
         protected override void OnStartup(StartupEventArgs e)
@@ -38,6 +39,7 @@ namespace WpfBookLibApp
             builder.RegisterType<IRepoAuthor>().As<RepoAuthor>().SingleInstance();
             builder.RegisterType<IRepoBook>().As<RepoBook>().SingleInstance();
             builder.RegisterType<IRepoComment>().As<RepoComment>().SingleInstance();
+            builder.RegisterType<IRepoMarkEnum>().As<RepoMarkEnum>().SingleInstance();
             builder.RegisterType<IRepoBookFeedbacks>().As<RepoBookFeedbacks>().SingleInstance();
             builder.RegisterType<IRepoNote>().As<RepoNote>().SingleInstance();
             builder.RegisterType<IRepoUser>().As<RepoUser>().SingleInstance();

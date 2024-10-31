@@ -42,6 +42,7 @@ namespace ModelsLib.ModelGenericCommunications
         {
             StringContent content = new StringContent(JsonSerializer.Serialize(value), Encoding.UTF8, "application/json");
             //return await _httpClient.PostAsync("delete/" + typeof(T).Name, content);
+            return new T();
         }
 
         public async void Update(T value)
