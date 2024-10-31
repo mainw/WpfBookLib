@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfBookLibApp
@@ -23,6 +22,10 @@ namespace WpfBookLibApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+        public void ChangePage<T>() where T : Page
+        {
+            MainFrame.Navigate(App.CreatePage<T>());
         }
     }
 }

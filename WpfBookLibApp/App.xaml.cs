@@ -8,6 +8,7 @@ using System.Windows;
 using WpfBookLibApp.Repositories;
 using Autofac;
 using WpfBookLibApp.Pages;
+using System.Windows.Controls;
 namespace WpfBookLibApp
 {
     /// <summary>
@@ -54,9 +55,9 @@ namespace WpfBookLibApp
 
             return builder.Build();
         }
-        public static void NavigateToPage<T>()
+        public static T CreatePage<T>() where T : Page
         {
-            (App.Current.MainWindow as MainWindow).MainFrame.Navigate(_container.Resolve<T>());
+            return _container.Resolve<T>();
         }
     }
 }
