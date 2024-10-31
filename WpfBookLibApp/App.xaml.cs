@@ -28,22 +28,19 @@ namespace WpfBookLibApp
         {
             base.OnStartup(e);
             _container = Configure();
-
-            var mainWindow = _container.Resolve<MainWindow>();
-            mainWindow.Show();
         }
         private IContainer Configure()
         {
             var builder = new ContainerBuilder();
 
             //Регистрация репозиториев
-            builder.RegisterType<IRepoAuthor>().As<RepoAuthor>().SingleInstance();
-            builder.RegisterType<IRepoBook>().As<RepoBook>().SingleInstance();
-            builder.RegisterType<IRepoComment>().As<RepoComment>().SingleInstance();
-            builder.RegisterType<IRepoMarkEnum>().As<RepoMarkEnum>().SingleInstance();
-            builder.RegisterType<IRepoBookFeedbacks>().As<RepoBookFeedbacks>().SingleInstance();
-            builder.RegisterType<IRepoNote>().As<RepoNote>().SingleInstance();
-            builder.RegisterType<IRepoUser>().As<RepoUser>().SingleInstance();
+            builder.RegisterType<RepoAuthor>().As<IRepoAuthor>().SingleInstance();
+            builder.RegisterType<RepoBook>().As<IRepoBook>().SingleInstance();
+            builder.RegisterType<RepoComment>().As<IRepoComment>().SingleInstance();
+            builder.RegisterType<RepoMarkEnum>().As<IRepoMarkEnum>().SingleInstance();
+            builder.RegisterType<RepoBookFeedbacks>().As<IRepoBookFeedbacks>().SingleInstance();
+            builder.RegisterType<RepoNote>().As<IRepoNote>().SingleInstance();
+            builder.RegisterType<RepoUser>().As<IRepoUser>().SingleInstance();
 
             //Регистрация окон
             builder.RegisterType<MainWindow>().AsSelf();

@@ -30,7 +30,7 @@ namespace DbApi.Controllers
 
         private string GenerateJwtToken(User user)
         {
-            
+            return null;
         }
     }
 }
