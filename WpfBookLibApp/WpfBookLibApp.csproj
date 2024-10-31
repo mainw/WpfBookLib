@@ -161,6 +161,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DbApi\DbApi.csproj">
+      <Project>{4c6c4994-f685-4080-8c37-48e99d40c68a}</Project>
+      <Name>DbApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModelsLib\ModelsLib.csproj">
       <Project>{caeb3d7b-1c51-410a-8049-97934cdca334}</Project>
       <Name>ModelsLib</Name>
