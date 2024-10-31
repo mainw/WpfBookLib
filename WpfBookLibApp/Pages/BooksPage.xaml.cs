@@ -24,7 +24,7 @@ namespace WpfBookLibApp.Pages
         public BooksPage()
         {
             InitializeComponent();
-            LVBook.ItemsSource = App._repoBook.GetAll().ToList();
+            LVBook.ItemsSource = App._repoBook.GetAll()?.ToList();
         }
         private void TBSearchBook_TextChanged(object sender, TextChangedEventArgs e)
         {

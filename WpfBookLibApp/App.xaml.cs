@@ -28,6 +28,17 @@ namespace WpfBookLibApp
         {
             base.OnStartup(e);
             _container = Configure();
+            RegisterRepo();
+        }
+        private void RegisterRepo()
+        {
+            _repoAuthor = _container.Resolve<IRepoAuthor>();
+            _repoBook = _container.Resolve<IRepoBook>();
+            _repoComment = _container.Resolve<IRepoComment>();
+            _repoMarkEnum = _container.Resolve<IRepoMarkEnum>();
+            _repoBookFeedbacks = _container.Resolve<IRepoBookFeedbacks>();
+            _repoNote = _container.Resolve<IRepoNote>();
+            _repoUser = _container.Resolve<IRepoUser>();
         }
         private IContainer Configure()
         {
@@ -41,7 +52,7 @@ namespace WpfBookLibApp
             builder.RegisterType<RepoBookFeedbacks>().As<IRepoBookFeedbacks>().SingleInstance();
             builder.RegisterType<RepoNote>().As<IRepoNote>().SingleInstance();
             builder.RegisterType<RepoUser>().As<IRepoUser>().SingleInstance();
-
+            
             //Регистрация окон
             builder.RegisterType<MainWindow>().AsSelf();
 
