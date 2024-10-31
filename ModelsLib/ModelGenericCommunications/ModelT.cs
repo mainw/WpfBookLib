@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ModelsLib.ModelGenericCommunications
 {
-    public class ModelT<T> : IModelT<T>
+    public class ModelT<T> : IModelT<T> where T : new()
     {
         private readonly HttpClient _httpClient;
         public ModelT()
