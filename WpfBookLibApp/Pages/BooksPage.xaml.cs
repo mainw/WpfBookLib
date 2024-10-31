@@ -37,5 +37,16 @@ namespace WpfBookLibApp.Pages
         {
             // Ссылку на добавление книги
         }
+        private void BtnDelBook_Click(object sender, RoutedEventArgs e)
+        {
+            if(LVBook.SelectedItem is Book book)
+            {
+                App._repoBook.Delete(LVBook.SelectedItem as Book);
+            }
+            else
+            {
+                MessageBox.Show("Элемент не выбран");
+            }
+        }
     }
 }
